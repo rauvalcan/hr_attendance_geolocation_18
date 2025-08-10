@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Attendance Geolocation</title>
+</head>
+<body>
+
+<section class="oe_container" style="padding: 0.5rem 1rem;">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B; font-size: 36px;">HR Attendance Geolocation</h2>
+        <h3 class="oe_slogan" style="font-size: 20px;">Record employee check-ins and check-outs with precise GPS location.</h3>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 0.5rem 1rem;">
+    <div class="oe_row oe_spaced">
+        <div class="alert" style="background-color: #7A5577; color: #FFFFFF; padding: 1rem; border-radius: 8px;">
+            <i class="fa fa-info-circle"></i>
+            <strong>Key Feature:</strong> This module enhances Odoo's standard attendance functionality by automatically capturing and storing the employee's GPS coordinates at the moment of check-in and check-out. It also allows defining specific work locations to automatically verify if the employee is on-site.
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 0.5rem 1rem;">
+    <h3 style="color:#875A7B; font-size: 24px; font-weight: 600;">Main Features</h3>
+    <ul class="list-unstyled" style="padding-left: 1rem; font-size: 16px;">
+        <li style="margin-bottom: 0.5rem;"><i class="fa fa-check-circle" style="color: #4CAF50;"></i> <strong>Automatic Geolocation:</strong> Captures latitude and longitude from the browser when an employee checks in or out.</li>
+        <li style="margin-bottom: 0.5rem;"><i class="fa fa-check-circle" style="color: #4CAF50;"></i> <strong>Work Locations:</strong> Define official work sites (e.g., "Main Office", "Warehouse") with GPS coordinates and a valid radius.</li>
+        <li style="margin-bottom: 0.5rem;"><i class="fa fa-check-circle" style="color: #4CAF50;"></i> <strong>On-Site Verification:</strong> The system automatically cross-references the employee's location with defined work sites to confirm if they are within the designated area.</li>
+        <li style="margin-bottom: 0.5rem;"><i class="fa fa-check-circle" style="color: #4CAF50;"></i> <strong>Seamless Integration:</strong> Integrates directly into the standard "My Attendances" widget. No extra steps for the employee.</li>
+        <li style="margin-bottom: 0.5rem;"><i class="fa fa-check-circle" style="color: #4CAF50;"></i> <strong>User-Friendly Notifications:</strong> Provides clear success or error messages to the user (e.g., location captured, permission denied).</li>
+    </ul>
+</section>
+
+<section class="oe_container oe_dark" style="background-color: #f0f0f0; padding: 1rem; border-radius: 8px;">
+    <h3 style="color:#875A7B; font-size: 24px; font-weight: 600;">How it Works</h3>
+    <p style="font-size: 16px;">
+        When an employee clicks the check-in/out button, the browser will prompt for location access (only the first time). Once approved, the module sends the coordinates to Odoo, which saves them in the attendance record and checks if the location matches any pre-configured work sites.
+    </p>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="attendance_widget.png" alt="Attendance Widget with Geolocation" style="max-width: 100%; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="text-center" style="margin-top: 1rem;"><strong>1. Employee checks in via the standard widget.</strong></p>
+        </div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="attendance_record.png" alt="Attendance Record with GPS Data" style="max-width: 100%; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="text-center" style="margin-top: 1rem;"><strong>2. GPS data and Work Location are saved in the attendance record.</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 0.5rem 1rem;">
+    <h3 style="color:#875A7B; font-size: 24px; font-weight: 600;">Configuration</h3>
+    <p style="font-size: 16px;">
+        To define work locations, go to: <br/>
+        <strong>Attendances App &rarr; Configuration &rarr; Work Locations</strong>.
+    </p>
+    <img class="oe_picture oe_screenshot" src="configuration_menu.png" alt="Configuration Menu for Work Locations" style="max-width: 80%; border: 1px solid #ddd; border-radius: 4px; display: block; margin: 1rem auto;">
+</section>
+
+<section class="oe_container" style="background-color: #7A5577; color: white; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+    <div class="oe_row">
+        <div class="oe_span2" style="text-align: center;">
+            <i class="fa fa-code fa-3x"></i>
+        </div>
+        <div class="oe_span10">
+            <h4 style="font-size: 20px; font-weight: 600;">No Maintained</h4>
+            <p>revc</p>
+            <p><a href="" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Website</a> | <a href="mailto:info@valdemuel.com" style="color: #FFFFFF; text-decoration: underline;">Contact Support</a></p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_attendance_view_form_geolocation" model="ir.ui.view">
+        <field name="name">hr.attendance.form.geolocation</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='check_out']" position="after">
+                 <field name="work_location_id" options="{'no_create': True, 'no_open': True}"/>
+                <group string="Geolocation Data" colspan="4">
+                    <group>
+                        <field name="check_in_latitude" readonly="1"/>
+                        <field name="check_in_longitude" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="check_out_latitude" readonly="1"/>
+                        <field name="check_out_longitude" readonly="1"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_attendance_view_tree_geolocation" model="ir.ui.view">
+        <field name="name">hr.attendance.tree.geolocation</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.hr_attendance_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='check_out']" position="after">
+                <field name="work_location_id" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
